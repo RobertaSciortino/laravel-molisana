@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/prodotti', function () {
   $pasta_shapes = [
@@ -144,5 +144,10 @@ Route::get('/prodotti', function () {
   $data = [
     "pasta_shapes" => $pasta_shapes
   ];
-    return view('prodotti', $data);
-});
+
+  return view('prodotti', $data);
+})->name('products');
+
+Route::get('/news', function () {
+    return view('news');
+})->name('news');

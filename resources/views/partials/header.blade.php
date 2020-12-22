@@ -4,17 +4,17 @@
   </div>
   <ul>
     <li>
-      <a href="#">
+      <a href="{{route('home')}}">
         Home
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="{{route('products')}}">
         Prodotti
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="{{route('news')}}">
         News
       </a>
     </li>
