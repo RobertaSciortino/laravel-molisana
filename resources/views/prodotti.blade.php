@@ -16,6 +16,11 @@
           @if ($shape["tipo"] == "lunga")
             <div class="card">
               <img src="{{$shape["src"]}}" alt="{{$shape["titolo"]}}">
+              <div class="overlay">
+                <a href="#">
+                  {{$shape["titolo"]}}
+                </a>
+              </div>
             </div>
           @endif
       @endforeach

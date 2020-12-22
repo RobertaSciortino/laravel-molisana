@@ -456,13 +456,41 @@ main .container {
   justify-content: flex-start;
 }
 
+.title-section {
+  color: #002D73;
+}
+
 .card {
   width: 32%;
   margin: 5px;
+  position: relative;
 }
 
 .card img {
   width: 100%;
+}
+
+.card .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.card .overlay a {
+  font-size: 20px;
+  color: #002D73;
+  font-weight: 700;
+}
+
+.card:hover .overlay {
+  background-color: #B3E5FC;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {

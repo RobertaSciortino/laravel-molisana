@@ -27,7 +27,7 @@ header {
         display: block;
       }
       &:hover {
-        background-color: #B3E5FC;
+        background-color: $hoverBackgroundColor;
       }
     }
   }
