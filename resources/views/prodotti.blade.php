@@ -40,6 +40,11 @@
           @if ($shape["tipo"] == "corta")
             <div class="card">
               <img src="{{$shape["src"]}}" alt="{{$shape["titolo"]}}">
+              <div class="overlay">
+                <a href="#">
+                  {{$shape["titolo"]}}
+                </a>
+              </div>
             </div>
           @endif
       @endforeach
@@ -59,6 +64,11 @@
           @if ($shape["tipo"] == "cortissima")
             <div class="card">
               <img src="{{$shape["src"]}}" alt="{{$shape["titolo"]}}">
+              <div class="overlay">
+                <a href="#">
+                  {{$shape["titolo"]}}
+                </a>
+              </div>
             </div>
           @endif
       @endforeach
