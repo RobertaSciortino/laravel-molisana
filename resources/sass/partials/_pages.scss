@@ -65,8 +65,32 @@ main {
 .product-details,
 .product-image {
   max-width: 100%;
+  background-color: $mainBackgroundColor;
+  color: $sectionsColor;
   img {
     max-width: 100%;
     display: block;
   }
+  h1 {
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .caption {
+    display: flex;
+    justify-content: center;
+    font-size: $spacing * 3;
+    line-height: 1.5em;
+    .shape-info {
+      display: flex;
+      justify-content: center;
+      padding: $spacing *5 0;
+      p {
+        padding: 0 $spacing * 2;
+      }
+      p:first-child {
+        border-right: 1px solid $sectionsColor;
+      }
+    }
+  }
+
 }
