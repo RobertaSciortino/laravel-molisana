@@ -13,13 +13,13 @@
         </div>
 
         <div class="card-container-long">
-          @foreach ($pasta_shapes as $shape)
+          @foreach ($pasta_shapes as $key => $shape)
               {{-- seleziono solo le card del formato "lunga" --}}
               @if ($shape["tipo"] == "lunga")
                 <div class="card">
                   <img src="{{$shape["src"]}}" alt="{{$shape["titolo"]}}">
                   <div class="overlay">
-                    <a href="#">
+                    <a href="{{route('product_details', ['id' => $key])}}">
                       {{$shape["titolo"]}}
                     </a>
                   </div>
