@@ -27,14 +27,17 @@ Route::get('/prodotti', function () {
 
 Route::get('/dettagli-prodotto/{id}', function ($id) {
   $pasta_shapes = config('pasta-shapes');
+  //verifico se $id e' un numero e se e' compreso tra 0 e il numero di elementi dell'array $pasta_shapes
+  if(is_numeric($id) && $id >= 0 && $id < count($pasta_shapes)) {
+    $product = $pasta_shapes[$id];
+    $data = [
+      "shape" => $product
+    ];
+    return view('dettagli', $data);
+  } else {
+    abort('404');
+  }
 
-  $product = $pasta_shapes[$id];
-
-  $data = [
-    "shape" => $product
-  ];
-
-  return view('dettagli', $data);
 })->name('product_details');
 
 Route::get('/news', function () {
