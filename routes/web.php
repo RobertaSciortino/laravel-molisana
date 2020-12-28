@@ -30,9 +30,23 @@ Route::get('/dettagli-prodotto/{id}', function ($id) {
   //verifico se $id e' un numero e se e' compreso tra 0 e il numero di elementi dell'array $pasta_shapes
   if(is_numeric($id) && $id >= 0 && $id < count($pasta_shapes)) {
     $product = $pasta_shapes[$id];
+
+    $next_id = $id + 1;
+    if($next_id >= count($pasta_shapes)) {
+      $next_id = null;
+    }
+
+    $prev_id = $id - 1;
+    if($prev_id < 0) {
+      $prev_id = null;
+    }
+
     $data = [
-      "shape" => $product
+      "shape" => $product,
+      "next_id" => $next_id,
+      "prev_id" => $prev_id
     ];
+
     return view('dettagli', $data);
   } else {
     abort('404');

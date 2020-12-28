@@ -489,6 +489,31 @@ main .container {
   border-right: 1px solid #002D73;
 }
 
+.product-image {
+  position: relative;
+}
+.product-image .previous, .product-image .next {
+  width: 3%;
+  height: 8%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+.product-image .previous i, .product-image .next i {
+  color: #FFF;
+}
+.product-image .previous {
+  top: 65%;
+  left: 0;
+}
+.product-image .next {
+  top: 65%;
+  right: 0;
+}
+
 footer {
   display: flex;
   justify-content: center;

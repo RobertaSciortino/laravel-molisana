@@ -93,4 +93,31 @@ main {
     }
   }
 
+
+}
+
+.product-image {
+  position: relative;
+  .previous, .next {
+    width: 3%;
+    height: 8%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: $spacing / 2;
+
+    i {
+      color: #FFF;
+    }
+  }
+  .previous {
+    top: 65%;
+    left: 0;
+  }
+  .next {
+    top: 65%;
+    right: 0;
+  }
 }
